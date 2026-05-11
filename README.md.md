@@ -1,28 +1,67 @@
-# Week 01 — Subnetting & IP Addressing
+# Enterprise LAN Foundation — Week 1
 
-## Overview
-Designed a subnetted office network for four departments using /26 subnetting.
+## Project Overview
 
-## Objectives
-- Divide network into subnets
-- Configure IP addressing
-- Configure gateways
-- Test connectivity
-- Troubleshoot subnet mask issue
+This project is part of my 6-week networking challenge focused on building real-world networking and troubleshooting skills.
+
+In Week 1, I designed and configured a small enterprise LAN using Cisco Packet Tracer. The project focuses on subnetting, DHCP, static routing, SSH hardening, and network validation.
+
+---
+
+## Topology
+
+![Topology](diagrams/topology.png)
+
+---
+
+## Network Segments
+
+| Department | Subnet | Hosts |
+|---|---|---|
+| Sales | 10.10.10.0/26 | 50 |
+| IT | 10.10.10.64/27 | 25 |
+| HR | 10.10.10.96/28 | 12 |
+| Management | 10.10.10.112/29 | 6 |
+
+---
 
 ## Technologies Used
-- Cisco Packet Tracer
-- IPv4
-- Subnetting
 
-## Files
-- topology.png
-- project-file.pkt
-- troubleshooting-notes.md
+- Cisco Packet Tracer
+- IPv4 & VLSM
+- DHCP
+- Static Routing
+- SSH
+- Cisco IOS CLI
+
+---
+
+## Security Configurations
+
+- SSH enabled for remote management
+- Enable secret configured
+- Service password encryption enabled
+- Banner MOTD configured
+- Unused ports administratively shutdown
+
+---
 
 ## Validation
-- All PCs successfully ping gateway
-- Incorrect subnet mask fault identified and fixed
 
-## Lessons Learned
-Subnet masks determine network boundaries and directly affect connectivity.
+- DHCP successfully assigns IP addresses
+- Inter-network communication verified
+- SSH access tested successfully
+- Routing table validated
+
+---
+
+## Project Structure
+
+```bash
+enterprise-lan-foundation/
+│
+├── configs/
+├── diagrams/
+├── documentation/
+├── captures/
+└── README.md
